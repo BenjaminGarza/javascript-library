@@ -50,3 +50,13 @@ function addBookToLibrary() {
   resetForm()
   render();
 }
+
+const displayForm = document.querySelector('#displayForm');
+displayForm.addEventListener('click', () => {
+  const form = document.querySelector('#form');
+  form.classList.toggle('hide-form');
+});
+
+saveBook.addEventListener('click', () => {
+  addBookToLibrary();
+});
