@@ -57,6 +57,26 @@ displayForm.addEventListener('click', () => {
   form.classList.toggle('hide-form');
 });
 
+unction updateBook(e) {
+  const index = e.target.attributes[1].value;
+  const targetedObject = myLibrary[Number(index)];
+  if (targetedObject.status == 'Unread') {
+    targetedObject.status = 'Read';
+    render()
+  } else {
+    targetedObject.status = 'Unread';
+    render()
+  }
+}
+
+function deleting(e) {
+  let index = e.target.attributes[1].value;
+  console.log(myLibrary.length)
+  console.log(index)
+  myLibrary.splice(index, 1);
+  render();
+}
+
 saveBook.addEventListener('click', () => {
   addBookToLibrary();
 });
