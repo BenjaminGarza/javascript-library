@@ -41,6 +41,15 @@ function render() {
   });
 }
 
+function resetForm(){
+  var authorsNameField = document.querySelector('#authorsName');
+  var bookTitleField = document.querySelector('#bookTitle');
+  var numberOfPagesField = document.querySelector('#numberOfPages');
+  authorsNameField.value = "";
+  bookTitleField.value = "";
+  numberOfPagesField.value = "";
+}
+
 function addBookToLibrary() {
   let authorsName = document.querySelector('#authorsName').value;
   let bookTitle = document.querySelector('#bookTitle').value;
@@ -57,7 +66,7 @@ displayForm.addEventListener('click', () => {
   form.classList.toggle('hide-form');
 });
 
-unction updateBook(e) {
+function updateBook(e) {
   const index = e.target.attributes[1].value;
   const targetedObject = myLibrary[Number(index)];
   if (targetedObject.status == 'Unread') {
