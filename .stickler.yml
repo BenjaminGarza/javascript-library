@@ -1,7 +1,8 @@
 linters:
     eslint:
-        config: './eslint.config'
-        ignore: 'no-unused-vars'
+      ignore: 'no-unused-vars'
+      config: './eslint.config'
+        
 files:
   ignore:
     - 'bower_components/*'
