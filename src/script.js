@@ -22,16 +22,16 @@ function render() {
               </h4>
             </li>
             <li class="list-group-item">
-              <p class="card-text">Authors name: ${book.authorsName}</p>
+              <p class="card-text">Author's name: ${book.authorsName}</p>
             </li>
             <li class="list-group-item">
-              <p class="card-text">pages: ${book.numberOfPages}</p>
+              <p class="card-text">Pages: ${book.numberOfPages}</p>
             </li>
             <li class="list-group-item">
-              <span class="status-span">status: </span><button onclick="updateBook(event)" data-index=${myLibrary.indexOf(book)} class="status-state">${book.status}</button>
+              <span class="status-span">Status: </span><button onclick="updateBook(event)" data-index=${myLibrary.indexOf(book)} class="status-state">${book.status}</button>
             </li>
             <li class="list-group-item">
-              <button onclick="deleting(event)" data-index="${myLibrary.indexOf(book)}" class="delete-btn">delete book</button>
+              <button onclick="deleting(event)" data-index="${myLibrary.indexOf(book)}" class="delete-btn">Delete book</button>
             </li>
 
           </ul>        
@@ -80,8 +80,6 @@ function updateBook(e) {
 
 function deleting(e) {
   let index = e.target.attributes[1].value;
-  console.log(myLibrary.length)
-  console.log(index)
   myLibrary.splice(index, 1);
   render();
 }
