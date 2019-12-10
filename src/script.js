@@ -41,22 +41,22 @@ function render() {
   });
 }
 
-function resetForm(){
-  var authorsNameField = document.querySelector('#authorsName');
-  var bookTitleField = document.querySelector('#bookTitle');
-  var numberOfPagesField = document.querySelector('#numberOfPages');
-  authorsNameField.value = "";
-  bookTitleField.value = "";
-  numberOfPagesField.value = "";
+function resetForm() {
+  const authorsNameField = document.querySelector('#authorsName');
+  const bookTitleField = document.querySelector('#bookTitle');
+  const numberOfPagesField = document.querySelector('#numberOfPages');
+  authorsNameField.value = '';
+  bookTitleField.value = '';
+  numberOfPagesField.value = '';
 }
 
 function addBookToLibrary() {
-  let authorsName = document.querySelector('#authorsName').value;
-  let bookTitle = document.querySelector('#bookTitle').value;
-  let numberOfPages = document.querySelector('#numberOfPages').value;  
-  let book = new Book(authorsName, bookTitle, numberOfPages);
+  const authorsName = document.querySelector('#authorsName').value;
+  const bookTitle = document.querySelector('#bookTitle').value;
+  const numberOfPages = document.querySelector('#numberOfPages').value;
+  const book = new Book(authorsName, bookTitle, numberOfPages);
   myLibrary.push(book);
-  resetForm()
+  resetForm();
   render();
 }
 
@@ -69,17 +69,17 @@ displayForm.addEventListener('click', () => {
 function updateBook(e) {
   const index = e.target.attributes[1].value;
   const targetedObject = myLibrary[Number(index)];
-  if (targetedObject.status == 'Unread') {
+  if (targetedObject.status === 'Unread') {
     targetedObject.status = 'Read';
-    render()
+    render();
   } else {
     targetedObject.status = 'Unread';
-    render()
+    render();
   }
 }
 
 function deleting(e) {
-  let index = e.target.attributes[1].value;
+  const index = e.target.attributes[1].value;
   myLibrary.splice(index, 1);
   render();
 }
