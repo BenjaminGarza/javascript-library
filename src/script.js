@@ -40,3 +40,13 @@ function render() {
       `;
   });
 }
+
+function addBookToLibrary() {
+  let authorsName = document.querySelector('#authorsName').value;
+  let bookTitle = document.querySelector('#bookTitle').value;
+  let numberOfPages = document.querySelector('#numberOfPages').value;  
+  let book = new Book(authorsName, bookTitle, numberOfPages);
+  myLibrary.push(book);
+  resetForm()
+  render();
+}
