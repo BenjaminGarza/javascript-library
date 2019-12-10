@@ -1,4 +1,4 @@
-/*eslint no-unused-vars: ["error", { "varsIgnorePattern": "[updateBook,deleting]" }]*/
+/* eslint no-unused-vars: ["error", { "varsIgnorePattern": "[updateBook,deleting]" }] */
 const myLibrary = [];
 const saveBook = document.querySelector('#saveBook');
 
