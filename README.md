@@ -1,5 +1,5 @@
 # Library
-The aim of this project was to rebuild an online library. You can see the full instructions on [the odin project](https://www.theodinproject.com/courses/javascript/lessons/library).
+The aim of this project was to build an online library. You can see the full instructions on [the odin project](https://www.theodinproject.com/courses/javascript/lessons/library).
 
 **Technology Used**
 * Javascript
